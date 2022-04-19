@@ -1,0 +1,26 @@
+#home-landing {
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(33, 22, 41);
+    h1 {
+        font-size: 64px;
+        color: white;
+    }
+
+    h2 {
+        font-size: 36px;
+        color: white;
+    }
+}
+
+#home-about-me {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(22, 26, 41);
+}
