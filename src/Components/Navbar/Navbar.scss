@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     
-    z-index: 1000;
+    z-index: 10;
     position: fixed;
 
     height: 3rem;
@@ -21,19 +21,24 @@
     width : fit-content;
     color: rgb(255, 255, 255);
 
+    position: relative;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    box-shadow: 0 0 2px black;
-
     padding: 0 10px;
+
+    cursor: pointer;
 }
 
 .nav-underline {
     width: 100%;
     height: 3px;
 
-    background-color:red;
+    background-color:white;
+    position: absolute;
+    z-index: 1000;
+    bottom: 3px;
 }
