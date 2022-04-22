@@ -4,7 +4,7 @@
   z-index: 10;
   position: fixed;
   height: 3rem;
-  width: 100vw;
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.274);
   display: -webkit-box;
   display: -ms-flexbox;
