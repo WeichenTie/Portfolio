@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Manrope:wght@200..800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  .grid-container {
+    @apply grid w-full grid-cols-12 gap-x-8 px-8;
+  }
+  /* .page-grid-wrapper {
+    @apply grid w-full grid-cols-12 gap-6 px-9;
+  }
+
+  .btn {
+    @apply flex items-center justify-center px-8 py-4 font-black;
+  }
+
+  .btn-primary {
+    @apply btn bg-grey-950 text-pampas-100;
+  }
+  .btn-primary-dark {
+    @apply btn bg-pampas-100 text-grey-950;
+  }
+
+  .btn-secondary {
+    @apply btn border-2 border-pampas-100;
+  }
+  .btn-secondary-dark {
+    @apply btn border-2 border-pampas-100 text-pampas-100;
+  } */
+
+  /* * {
+    z-index: 10;
+  }*/
+  h2 {
+    @apply text-8xl;
+  }
+  p {
+    @apply leading-relaxed;
+  }
+  h2 + p {
+    @apply mt-12;
+  }
+  p + p {
+    @apply mt-8;
+  }
+}
