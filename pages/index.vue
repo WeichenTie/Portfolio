@@ -1,7 +1,11 @@
 <template>
+  <Cursor></Cursor>
   <HomeLanding></HomeLanding>
   <!-- <HomeFeature></HomeFeature> -->
+  <HomeAbout></HomeAbout>
   <HomeProjects></HomeProjects>
+  <HomeSkills></HomeSkills>
+  <HomeContact></HomeContact>
   <!-- <footer id="footer" class="min-h-screen bg-yellow-950"></footer> -->
 </template>
 

@@ -9,9 +9,9 @@
       /></a>
     </div>
     <h1
-      class="col-span-10 flex h-full w-full flex-col items-center justify-center gap-2 font-display text-[160px] font-bold leading-none"
+      class="relative col-span-10 flex h-full w-full flex-col items-center justify-center gap-2 font-display text-[160px] font-bold leading-none"
     >
-      <span>
+      <span class="relative">
         <span>WEICHEN TIE&nbsp;</span>
         <span class="subtext text-orange-400 text-opacity-70"
           >(/weɪ ʧɛn taɪ/)</span

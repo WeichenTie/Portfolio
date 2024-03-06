@@ -6,27 +6,27 @@
   .grid-container {
     @apply grid w-full grid-cols-12 gap-x-8 px-8;
   }
-  /* .page-grid-wrapper {
+  .page-grid-wrapper {
     @apply grid w-full grid-cols-12 gap-6 px-9;
   }
 
   .btn {
-    @apply flex items-center justify-center px-8 py-4 font-black;
+    @apply flex items-center justify-center px-8 py-4 font-black shadow-xl shadow-pampas-200 duration-300  hover:shadow-pampas-400;
   }
 
   .btn-primary {
-    @apply btn bg-grey-950 text-pampas-100;
+    @apply btn bg-neutral-900 text-pampas-100;
   }
   .btn-primary-dark {
-    @apply btn bg-pampas-100 text-grey-950;
+    @apply btn bg-pampas-100 text-neutral-900;
   }
 
   .btn-secondary {
-    @apply btn border-2 border-pampas-100;
+    @apply btn border-2 border-neutral-900;
   }
   .btn-secondary-dark {
     @apply btn border-2 border-pampas-100 text-pampas-100;
-  } */
+  }
 
   /* * {
     z-index: 10;

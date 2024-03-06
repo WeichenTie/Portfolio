@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+let ctx: gsap.Context;
 const projectsQuery = queryContent("projects");
 const projects = await projectsQuery.where({ showcased: true }).find();
 const projectsLeft = projects.filter((_, i) => {
@@ -7,10 +11,35 @@ const projectsLeft = projects.filter((_, i) => {
 const projectsRight = projects.filter((_, i) => {
   return i % 2 !== 0;
 });
+const container = ref();
+onMounted(() => {
+  ctx = gsap.context((self) => {
+    gsap.from(".view-all-card", {
+      opacity: 0,
+      duration: 1.5,
+      scrollTrigger: {
+        trigger: ".view-all-card",
+        start: "top center",
+      },
+    });
+    gsap.from("h2", {
+      opacity: 0,
+      duration: 1.5,
+      scrollTrigger: {
+        trigger: "h2",
+        start: "top center",
+      },
+    });
+  }, container.value);
+});
+
+onUnmounted(() => {
+  ctx.revert();
+});
 </script>
 
 <template>
-  <div class="container text-pampas-100">
+  <div ref="container" class="container relative z-20 text-pampas-100">
     <div class="container-inner-wrapper">
       <h2 class="col-span-full col-start-2 mt-auto font-display font-bold">
         Works I'm <span class="text-rose-500">proud</span> of.
@@ -18,40 +47,18 @@ const projectsRight = projects.filter((_, i) => {
 
       <div class="project-container-wrapper">
         <div class="project-container project-container-left">
-          <div v-for="item in projectsLeft" class="project-card">
-            <NuxtImg
-              fit="cover"
-              class="w-full object-cover"
-              format="webp"
-              :src="item.thumbnail"
-            ></NuxtImg>
-            <div>
-              <h3 class="text-3xl">{{ item.title }}</h3>
-              <span
-                class="inline-block text-lg opacity-40"
-                v-for="tag in item.tags"
-                >#{{ tag }}&nbsp;</span
-              >
-            </div>
-          </div>
+          <HomeProjectCard
+            v-for="item in projectsLeft"
+            :key="item._path"
+            :data="item"
+          ></HomeProjectCard>
         </div>
         <div class="project-container project-container-right">
-          <div v-for="item in projectsRight" class="project-card">
-            <NuxtImg
-              fit="cover"
-              class="w-full object-cover"
-              format="webp"
-              :src="item.thumbnail"
-            ></NuxtImg>
-            <div>
-              <h3 class="text-3xl">{{ item.title }}</h3>
-              <span
-                class="inline-block text-lg opacity-40"
-                v-for="tag in item.tags"
-                >#{{ tag }}&nbsp;</span
-              >
-            </div>
-          </div>
+          <HomeProjectCard
+            v-for="item in projectsRight"
+            :key="item._path"
+            :data="item"
+          ></HomeProjectCard>
           <NuxtLink class="view-all-card" to="/projects"
             >View More Projects</NuxtLink
           >
@@ -63,52 +70,19 @@ const projectsRight = projects.filter((_, i) => {
 
 <style scoped>
 .container {
-  @apply rounded-t-[4rem] bg-neutral-900 px-8 py-[200px];
+  @apply rounded-[4rem] bg-neutral-900 px-8 py-[200px] shadow-[0_10a_50px_-10px_rgba(0,0,0,1)];
 }
 
 .container-inner-wrapper {
-  @apply mx-auto w-full max-w-[1200px];
+  @apply mx-auto w-full max-w-[1440px];
 }
 
 .project-container {
   @apply flex w-full flex-col gap-y-16;
 }
 
-.project-card {
-  @apply flex flex-col gap-12;
-}
-
-.project-card img {
-  @apply overflow-hidden rounded-[4rem];
-}
-
-.project-container-left .project-card:nth-of-type(1) img {
-  @apply aspect-[5/6.5];
-}
-.project-container-left .project-card:nth-of-type(2) img {
-  @apply aspect-[5/5];
-}
-.project-container-left .project-card:nth-of-type(3) img {
-  @apply aspect-[5/6.5];
-}
-.project-container-left .project-card:nth-of-type(4) img {
-  @apply aspect-[5/5];
-}
-.project-container-right .project-card:nth-of-type(1) {
-  @apply mt-[50%];
-}
-.project-container-right .project-card:nth-of-type(1) img {
-  @apply aspect-[5/5];
-}
-.project-container-right .project-card:nth-of-type(2) img {
-  @apply aspect-[5/6];
-}
-.project-container-right .project-card:nth-of-type(3) img {
-  @apply aspect-[5/5];
-}
-
 .view-all-card {
-  @apply flex w-full flex-1 items-center justify-center;
+  @apply flex w-full flex-1 items-center justify-center rounded-[4rem]  border-4 text-4xl font-black text-pampas-100  shadow-xl shadow-pampas-950 duration-300 hover:bg-pampas-100 hover:text-neutral-900 hover:shadow-pampas-800;
 }
 
 .project-container-wrapper {
