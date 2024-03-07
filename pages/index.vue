@@ -10,3 +10,15 @@
 </template>
 
 <script setup lang="ts"></script>
+
+<style>
+p {
+  @apply leading-relaxed;
+}
+/* h2 + p {
+  @apply mt-12;
+}
+p + p {
+  @apply mt-8;
+} */
+</style>

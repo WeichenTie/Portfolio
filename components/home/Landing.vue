@@ -8,12 +8,10 @@
         ><Icon class="h-16 w-16" name="logos:linkedin-icon"
       /></a>
     </div>
-    <h1
-      class="relative col-span-10 flex h-full w-full flex-col items-center justify-center gap-2 font-display text-[160px] font-bold leading-none"
-    >
+    <h1>
       <span class="relative">
         <span>WEICHEN TIE&nbsp;</span>
-        <span class="subtext text-orange-400 text-opacity-70"
+        <span class="subtext phonetic text-orange-400 text-opacity-70"
           >(/weɪ ʧɛn taɪ/)</span
         >
       </span>
@@ -37,9 +35,17 @@
 </template>
 
 <style scoped>
-.subtext {
-  @apply text-7xl;
+h1 {
+  @apply relative col-span-10 flex h-full w-full flex-col items-center justify-center gap-2 font-display text-[160px] font-bold leading-none 2xl:text-[120px] xl:text-8xl lg:text-7xl md:text-6xl;
 }
+.subtext {
+  @apply text-7xl 2xl:text-6xl xl:text-5xl lg:text-4xl md:text-3xl;
+}
+
+.phonetic {
+  @apply sm:hidden;
+}
+
 .grid-container {
   @apply grid w-full grid-cols-12 gap-x-8 px-8;
 }

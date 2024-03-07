@@ -3,7 +3,7 @@
     <NuxtLink to="/">WT</NuxtLink>
     <div class="ml-auto flex gap-8">
       <NuxtLink to="/">Home</NuxtLink>
-      <NuxtLink to="/">Projects</NuxtLink>
+      <NuxtLink to="/projects">Projects</NuxtLink>
       <NuxtLink to="/">Resume/CV</NuxtLink>
       <NuxtLink to="/#contact">Contact</NuxtLink>
     </div>

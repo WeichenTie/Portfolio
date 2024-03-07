@@ -8,8 +8,10 @@
         :src="data.thumbnail"
       ></NuxtImg>
       <div>
-        <h3 class="text-3xl">{{ data.title }}</h3>
-        <span class="inline-block text-lg opacity-40" v-for="tag in data.tags"
+        <h3 class="font-display text-3xl font-bold">{{ data.title }}</h3>
+        <span
+          class="mt-2 inline-block text-lg opacity-40"
+          v-for="tag in data.tags"
           >#{{ tag }}&nbsp;</span
         >
       </div>

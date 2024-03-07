@@ -83,7 +83,8 @@ onMounted(() => {
       trigger: container.value,
       pin: container.value,
       pinSpacing: false,
-      start: "+=0 top",
+      start: "center center",
+      markers: true,
       scrub: 1,
     });
   }, container.value);

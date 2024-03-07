@@ -41,7 +41,9 @@ onUnmounted(() => {
 <template>
   <div ref="container" class="container relative z-20 text-pampas-100">
     <div class="container-inner-wrapper">
-      <h2 class="col-span-full col-start-2 mt-auto font-display font-bold">
+      <h2
+        class="col-span-full col-start-2 mt-auto font-display text-6xl font-bold"
+      >
         Works I'm <span class="text-rose-500">proud</span> of.
       </h2>
 
