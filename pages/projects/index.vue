@@ -1,5 +1,6 @@
 <template>
   <div
+    ref="container"
     class="min-h-screen w-full bg-neutral-900 px-8 pt-[200px] text-pampas-100"
   >
     <div
@@ -17,7 +18,6 @@
           :key="item._path"
           :to="item._path"
         >
-          {{ console.log(item) }}
           <div
             class="card col-span-3 flex aspect-[8/12] h-full w-full flex-col overflow-hidden rounded-3xl bg-neutral-800"
           >
@@ -46,6 +46,13 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+const container = ref();
+onMounted(() => {
+  useCursor(".card", container.value);
+});
+</script>
 
 <style scoped>
 .card {

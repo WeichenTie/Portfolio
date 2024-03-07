@@ -12,6 +12,7 @@ const c2 = ref<HTMLElement>();
 const c3 = ref<HTMLElement>();
 
 onMounted(() => {
+  useCursor(".btn-group > *", container.value);
   SplitType.create(".splt", { types: "words,chars" });
 
   ctx = gsap.context((self) => {
@@ -79,14 +80,13 @@ onMounted(() => {
       },
       "-=0.75",
     );
-    const pinTrigger = new ScrollTrigger({
-      trigger: container.value,
-      pin: container.value,
-      pinSpacing: false,
-      start: "center center",
-      markers: true,
-      scrub: 1,
-    });
+    // const pinTrigger = new ScrollTrigger({
+    //   trigger: container.value,
+    //   pin: container.value,
+    //   pinSpacing: false,
+    //   start: "center center",
+    //   scrub: 1,
+    // });
   }, container.value);
 });
 
@@ -102,7 +102,7 @@ onUnmounted(() => {
     class="outer-container flex min-h-[max(100vh,1200px)] items-center justify-center px-8"
   >
     <div class="grid max-w-[1440px] grid-cols-2">
-      <div class="min-w-[50%] flex-1">
+      <div>
         <h2 class="text-6xl font-black">
           A <span class="text-teal-500">slice</span> of me.
         </h2>

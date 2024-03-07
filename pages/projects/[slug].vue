@@ -2,6 +2,8 @@
   <ContentDoc class="project-blog-container"> </ContentDoc>
 </template>
 
+<script setup lang="ts"></script>
+
 <style>
 .project-blog-container {
   @apply mx-auto w-full max-w-[60ch] px-4 py-24 text-2xl;

@@ -1,5 +1,4 @@
 <template>
-  <Cursor></Cursor>
   <HomeLanding></HomeLanding>
   <!-- <HomeFeature></HomeFeature> -->
   <HomeAbout></HomeAbout>

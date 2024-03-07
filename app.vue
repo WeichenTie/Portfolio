@@ -1,4 +1,5 @@
 <template>
+  <Cursor></Cursor>
   <Navbar></Navbar>
   <div class="page-container">
     <NuxtPage></NuxtPage>

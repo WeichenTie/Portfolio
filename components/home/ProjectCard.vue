@@ -37,10 +37,19 @@ onMounted(() => {
       opacity: 0,
       duration: 1.5,
       display: "hidden",
+
       scrollTrigger: {
         trigger: container.value,
         start: "top center",
       },
+    });
+    gsap.from(container.value, {
+      scrollTrigger: {
+        trigger: container.value,
+        start: "top center",
+      },
+      duration: 0.01,
+      pointerEvents: "none",
     });
   });
 });
@@ -52,7 +61,7 @@ onUnmounted(() => {
 
 <style scoped>
 .project-card {
-  @apply flex flex-col gap-12;
+  @apply pointer-events-auto flex flex-col gap-12;
 }
 
 .project-card img {

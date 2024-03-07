@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 gsap.registerPlugin(ScrollTrigger);
 let ctx: gsap.Context;
 const projectsQuery = queryContent("projects");
@@ -12,7 +13,9 @@ const projectsRight = projects.filter((_, i) => {
   return i % 2 !== 0;
 });
 const container = ref();
+
 onMounted(() => {
+  useCursor(".project-card, .view-all-card", container.value);
   ctx = gsap.context((self) => {
     gsap.from(".view-all-card", {
       opacity: 0,
