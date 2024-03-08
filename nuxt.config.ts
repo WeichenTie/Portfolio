@@ -10,5 +10,9 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  components: true,
+  content: {
+    highlight: {
+      langs: ["js", "ts", "glsl"],
+    },
+  },
 });

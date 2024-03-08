@@ -1,51 +1,63 @@
 <template>
-  <ContentDoc class="project-blog-container"> </ContentDoc>
+  <ContentDoc v-slot="{ doc }">
+    <article class="project-blog-container">
+      <BlogImg wrapper-class="aspect-video" :src="doc.thumbnail"></BlogImg>
+      <ContentRenderer
+        class="project-blog-content"
+        :value="doc"
+      ></ContentRenderer>
+    </article>
+  </ContentDoc>
 </template>
 
 <script setup lang="ts"></script>
 
 <style>
 .project-blog-container {
-  @apply mx-auto w-full max-w-[60ch] px-4 py-24 text-2xl;
+  @apply mx-auto w-full max-w-[70ch]  px-4 py-24 text-xl;
 }
 .project-blog-container .thumbnail {
   @apply aspect-[16/10] w-full rounded-3xl object-cover shadow-md;
 }
-.project-blog-container > img {
+.project-blog-content img {
   @apply rounded-3xl shadow-md;
 }
-.project-blog-container > img {
+.project-blog-content img {
   @apply mb-8 mt-4 object-cover;
 }
-.project-blog-container > img + p {
+.project-blog-content img + p {
   @apply mt-8;
 }
-.project-blog-container > p + p {
+.project-blog-content p + p {
   @apply mt-4;
 }
-.project-blog-container > ol + p {
+.project-blog-content ol + p {
   @apply mt-4;
 }
-.project-blog-container > ul + p {
+.project-blog-content ul + p {
   @apply mt-4;
 }
-.project-blog-container > h1 {
+.project-blog-content h1 {
   @apply mt-16 text-6xl font-black text-rose-700;
 }
-.project-blog-container > h2 {
+.project-blog-content h2 {
   @apply mb-4 mt-8 font-bold;
 }
-.project-blog-container > h3 {
+.project-blog-content h3 {
   @apply mb-2 mt-4 font-bold underline;
 }
-.project-blog-container > ul {
+.project-blog-content ul {
   @apply ml-12 mt-4 list-disc space-y-2;
 }
-.project-blog-container > ol {
+.project-blog-content ol {
   @apply ml-12 mt-4 list-decimal space-y-2;
 }
 
-.project-blog-container > code > span {
-  @apply bg-black;
+.project-blog-content pre {
+  @apply my-8 w-full text-wrap rounded-3xl;
+}
+
+.project-blog-content pre code .highlighted {
+  @apply bg-rose-500 bg-opacity-15;
 }
 </style>
