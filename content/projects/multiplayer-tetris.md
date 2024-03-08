@@ -2,7 +2,7 @@
 title: "Multiplayer Tetris"
 thumbnail: "/images/projects/tetris/thumbnail.webp"
 description: "My personal portfolio that showcases all my work"
-tags: ["Pygame", "Python", "Socketio"]
+technologies: ["Pygame", "Python", "Socketio"]
 assets: "/images/projects/portfolio"
 showcased: false
 ---
@@ -13,8 +13,7 @@ showcased: false
 
 ## Technologies Used
 
-::Technologies{:technologies=technologies}
-::
+<BlogTechnologies :tags="technologies"></BlogTechnologies>
 
 ## Process
 

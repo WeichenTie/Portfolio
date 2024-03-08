@@ -1,8 +1,8 @@
 ---
 title: "Particle Attractor"
 thumbnail: "/images/projects/particle2d/thumbnail.webp"
-description: "My personal portfolio that showcases all my work"
-tags: ["Pygame", "Python", "Socketio"]
+description: "Particle simulation using vertex transformations in GLSL where you can click and drag around to make particles follow your cursor."
+technologies: ["GLSL", "WebGL"]
 assets: "/images/projects/portfolio"
 showcased: false
 ---
@@ -13,8 +13,7 @@ showcased: false
 
 ## Technologies Used
 
-::Technologies{:technologies=technologies}
-::
+<BlogTechnologies :tags="technologies"></BlogTechnologies>
 
 ## Process
 

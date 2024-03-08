@@ -9,7 +9,7 @@
       <ContentList
         class="contents"
         path="/projects"
-        :sort="{ showcased: true }"
+        :sort="[{ showcased: false }, {$numeric: true}]"
         v-slot="{ list }"
       >
         <NuxtLink
@@ -35,7 +35,7 @@
               <div class="mt-auto flex flex-wrap gap-1">
                 <span
                   class="inline-block text-sm leading-none opacity-40"
-                  v-for="tag in item.tags"
+                  v-for="tag in item.technologies"
                   >#{{ tag }}&nbsp;</span
                 >
               </div>

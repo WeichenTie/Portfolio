@@ -1,6 +1,6 @@
 <template>
   <div class="project-card" ref="container">
-    <NuxtLink :to="'/'" class="contents">
+    <NuxtLink :to="data._path" class="contents">
       <NuxtImg
         fit="cover"
         class="w-full object-cover"
@@ -10,8 +10,8 @@
       <div>
         <h3 class="font-display text-3xl font-bold">{{ data.title }}</h3>
         <span
-          class="mt-2 inline-block text-lg opacity-40"
-          v-for="tag in data.tags"
+          class="mt-2 inline-block text-lg opacity-40 italic"
+          v-for="tag in data.technologies"
           >#{{ tag }}&nbsp;</span
         >
       </div>

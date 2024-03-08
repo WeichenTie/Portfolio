@@ -1,8 +1,8 @@
 ---
 title: "My Portfolio"
 thumbnail: "/images/projects/portfolio/thumbnail.png"
-description: "My personal portfolio that showcases all my work"
-tags: ["Nuxt3", "VueJS", "SSG", "Github Pages", "GSAP"]
+description: "My personal portfolio that highlights my creative endeavors in scientific simulation, game development, product design, and interactive graphics."
+technologies: ["Nuxt3", "VueJS", "SSG", "Github Pages", "GSAP"]
 assets: "/images/projects/portfolio"
 showcased: false
 ---
@@ -13,8 +13,8 @@ showcased: false
 
 ## Technologies Used
 
-::Technologies{:technologies=technologies}
-::
+<BlogTechnologies :tags="technologies"></BlogTechnologies>
+
 
 ## Process
 
