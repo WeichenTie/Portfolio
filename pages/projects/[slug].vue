@@ -23,8 +23,9 @@
   @apply rounded-3xl shadow-md;
 }
 .project-blog-content img {
-  @apply mb-8 mt-4 object-cover;
+  @apply mb-4 mt-4 object-cover;
 }
+
 .project-blog-content img + p {
   @apply mt-8;
 }
@@ -54,10 +55,16 @@
 }
 
 .project-blog-content pre {
-  @apply my-8 w-full text-wrap rounded-3xl;
+  @apply my-8 w-full max-w-[70ch] overflow-x-auto text-wrap;
+}
+.project-blog-content pre code {
+  @apply contents;
+}
+.project-blog-content pre code .line {
+  @apply text-nowrap;
 }
 
 .project-blog-content pre code .highlighted {
-  @apply bg-rose-500 bg-opacity-15;
+  @apply bg-teal-500 bg-opacity-30;
 }
 </style>

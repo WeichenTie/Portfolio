@@ -7,6 +7,15 @@ let animationFrame: number;
 const hide = ref(true);
 const hoverState = useState("cursorState", () => null);
 const mousePos: { x?: number; y?: number } = { x: undefined, y: undefined };
+const route = useRoute();
+
+watch(
+  () => route.fullPath,
+  () => {
+    hoverState.value = null;
+  },
+);
+
 function onMouseMove(e: MouseEvent) {
   if (hide.value) {
     hide.value = false;

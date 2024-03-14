@@ -9,7 +9,7 @@
       <ContentList
         class="contents"
         path="/projects"
-        :sort="[{ showcased: false }, { $numeric: true }]"
+        :query="queryContent().find()"
         v-slot="{ list }"
       >
         <NuxtLink

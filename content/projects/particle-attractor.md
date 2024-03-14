@@ -42,8 +42,8 @@ The great thing about the GPU is that it can process hundreds of thousands of ve
 function generateParticles(count: number) {
   let particles = [];
   for (let i = 0; i < count; i++) {
-    particles.push(Math.random() * width, Math.random() * height); // x // [!code highlight]
-    particles.push(Math.random(), Math.random()); // y // [!code highlight]
+    particles.push(Math.random() * width, Math.random() * height); // x, y // [!code highlight]
+    particles.push(0, 0); // vx,vy // [!code highlight]
   }
   return particles;
 }
@@ -86,43 +86,60 @@ Notice how there is 2 VAO, VBO and TF buffers. This is what allows us to ping po
 
 In other words, buffer A will first be used to calculate the next position which is then stored to buffer B. They are then swapped so that buffer B is used to calculate the next position which is stored in buffer A and so on.
 
-## Programming the shader
+## Vertex Shader
 
-For the shader, we
+The vertex shader will be used to update the properties of each individual particle in the simulation.
+
+1. Simulate drag forces by slowing down the particle.
+2. Accelerate the particles to the mouse when pressed.
+3. Update the positions of each particle using the formula: x<sub>f</sub>= x<sub>i</sub> + v<sub>f</sub>.
 
 ```glsl
-#version 300 es
-layout(location = 0) in vec2 a_OldPosition;
-layout(location = 1) in vec2 a_OldVelocity;
-
-uniform mat4 u_MVP; // model view projection matrix
-uniform vec2 u_MousePosition;
-uniform int u_MouseDown;
-
-out vec2 v_NewPosition;
-out vec2 v_NewVelocity;
-
-// Returns the direction vector from particle to mouse
-vec2 particleToMouse() {
-    return normalize(u_MousePosition - a_OldPosition);
+// ...
+// Returns the attraction force between mouse and particle
+vec2 gravityForce() {
+  return normalize(u_MousePosition - a_OldPosition);
 }
+
 vec2 calcNewVelocity() {
-    vec2 vel = vec2(0,0);
-    // Accelerate the particle to mouse if
-    // mouse left is pressed down.
-    if (u_MouseDown == 1) {
-        vel = a_OldVelocity + particleToMouse();
-    }
-    return vel;
+  // Apply a frictional/drag force
+  vec2 vel = a_OldVelocity * 0.985;
+  // Accelerate the particle to mouse if
+  // mouse left is pressed down.
+  if (u_MouseDown == 1) {
+      vel += gravityForce();
+  }
+  return vel;
 }
 
 void main() {
-    v_NewVelocity = calcNewVelocity();
-    v_NewPosition = a_OldPosition + v_NewVelocity;
+  v_NewVelocity = calcNewVelocity();
+  v_NewPosition = a_OldPosition + v_NewVelocity;
 
-    gl_Position = u_MVP * vec4(a_OldPosition, 0, 1);
-    gl_PointSize = 1.0;
+  gl_Position = u_MVP * vec4(a_OldPosition, 0, 1);
+  gl_PointSize = 1.0;
+}
+```
+
+## Fragment Shader
+
+We can now render this on our screen using our fragment shader and also apply a beautiful chromatic effect as highlighted below.
+
+```glsl
+// ...
+void main() {
+  vec2 direction = normalize(v_NewVelocity);
+  vec3 color = vec3(abs(direction.x), // [!code highlight]
+    abs(direction.y + direction.x) / 2.0,// [!code highlight]
+    abs(direction.y));// [!code highlight]
+  f_Color = vec4(color, 0.7);
 }
 ```
 
 ## Results
+
+The results are honestly quite spectacular as even though everything is 2D, it still gives a 3D illusion.
+
+<blog-img src="/images/projects/particle2d/spherethumbnail.webp" ></blog-img>
+<blog-img src="/images/projects/particle2d/vortex.webp" ></blog-img>
+<blog-img src="/images/projects/particle2d/frontwave.webp" ></blog-img>
