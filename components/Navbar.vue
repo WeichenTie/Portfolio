@@ -4,7 +4,7 @@
     <div class="ml-auto flex gap-8">
       <NuxtLink to="/">Home</NuxtLink>
       <NuxtLink to="/projects">Projects</NuxtLink>
-      <NuxtLink to="/">Resume/CV</NuxtLink>
+      <NuxtLink to="/experience">Resume/CV</NuxtLink>
       <NuxtLink to="/#contact">Contact</NuxtLink>
     </div>
   </nav>
@@ -12,7 +12,7 @@
 
 <style scoped>
 nav {
-  @apply fixed left-0 top-0 z-50 flex h-24 w-full items-center px-32;
+  @apply fixed left-0 top-0 z-50 flex h-24 w-full items-center px-16;
 }
 a {
   @apply relative inline-block bg-white bg-clip-text text-transparent;
