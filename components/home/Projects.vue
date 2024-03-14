@@ -75,7 +75,7 @@ onUnmounted(() => {
 
 <style scoped>
 .container {
-  @apply rounded-[4rem] bg-neutral-900 px-8 py-[200px] shadow-[0_10a_50px_-10px_rgba(0,0,0,1)];
+  @apply rounded-[4rem] bg-neutral-900 px-8 py-36 shadow-[0_10a_50px_-10px_rgba(0,0,0,1)];
 }
 
 .container-inner-wrapper {
@@ -91,6 +91,6 @@ onUnmounted(() => {
 }
 
 .project-container-wrapper {
-  @apply col-span-full mt-32 grid grid-cols-2 gap-x-16;
+  @apply col-span-full mt-16 grid grid-cols-2 gap-x-16;
 }
 </style>
