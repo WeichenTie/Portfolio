@@ -80,13 +80,6 @@ onMounted(() => {
       },
       "-=0.75",
     );
-    // const pinTrigger = new ScrollTrigger({
-    //   trigger: container.value,
-    //   pin: container.value,
-    //   pinSpacing: false,
-    //   start: "center center",
-    //   scrub: 1,
-    // });
   }, container.value);
 });
 
@@ -125,14 +118,15 @@ onUnmounted(() => {
       <div class="relative flex items-center justify-center md:hidden">
         <div
           ref="c1"
-          class="absolute top-1/2 aspect-[45/35] w-[70%] max-w-[450px] -translate-y-[100%] -rotate-12 overflow-hidden rounded-3xl bg-red-800"
+          class="absolute top-1/2 aspect-[45/35] w-[70%] max-w-[450px] -translate-y-[100%] -rotate-6 overflow-hidden rounded-3xl bg-red-800"
         >
           <NuxtImg
+            :modifiers="{ rotate: null }"
             :width="450"
             :height="350"
             format="webp"
             fit="cover"
-            src="/images/about/1.png"
+            src="/images/about/3.JPG"
             placeholder
           />
         </div>
@@ -141,10 +135,11 @@ onUnmounted(() => {
           class="absolute top-1/2 aspect-[45/35] w-[70%] max-w-[450px] -translate-y-[45%] rotate-6 overflow-hidden rounded-3xl bg-green-800"
         >
           <NuxtImg
+            :modifiers="{ rotate: null }"
             :width="450"
             :height="350"
             format="webp"
-            src="/images/about/2.png"
+            src="/images/about/2.webp"
             placeholder
           />
         </div>
@@ -153,10 +148,11 @@ onUnmounted(() => {
           class="absolute top-1/2 aspect-[45/35] w-[70%] max-w-[450px] -translate-y-[-10%] -rotate-6 overflow-hidden rounded-3xl bg-neutral-800"
         >
           <NuxtImg
+            :modifiers="{ rotate: null }"
             :width="450"
             :height="350"
             format="webp"
-            src="/images/about/3.png"
+            src="/images/about/1.webp"
             placeholder
           />
         </div>

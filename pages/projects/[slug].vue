@@ -42,7 +42,7 @@
   @apply mt-16 text-6xl font-black text-rose-700;
 }
 .project-blog-content h2 {
-  @apply mb-4 mt-8 font-bold;
+  @apply mb-4 mt-8 text-2xl font-bold;
 }
 .project-blog-content h3 {
   @apply mb-2 mt-4 font-bold underline;

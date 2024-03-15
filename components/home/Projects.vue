@@ -83,7 +83,7 @@ onUnmounted(() => {
 }
 
 .project-container {
-  @apply flex w-full flex-col gap-y-16;
+  @apply flex w-full  flex-col items-center gap-y-16 lg:grid-cols-1;
 }
 
 .view-all-card {
@@ -91,6 +91,6 @@ onUnmounted(() => {
 }
 
 .project-container-wrapper {
-  @apply col-span-full mt-16 grid grid-cols-2 gap-x-16;
+  @apply col-span-full mt-16 grid grid-cols-2  gap-x-16 lg:grid-cols-1;
 }
 </style>

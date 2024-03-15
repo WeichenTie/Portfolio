@@ -19,7 +19,7 @@
           :to="item._path"
         >
           <div
-            class="card col-span-3 flex aspect-[8/12] h-full w-full flex-col overflow-hidden rounded-3xl bg-neutral-800"
+            class="card col-span-3 mx-auto flex aspect-[8/12] h-full w-full max-w-[350px] flex-col overflow-hidden rounded-3xl bg-neutral-800 xl:col-span-4 lg:col-span-6 [@media(max-width:700px)]:col-span-full"
           >
             <div>
               <NuxtImg

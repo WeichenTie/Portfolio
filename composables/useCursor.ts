@@ -1,4 +1,4 @@
-export function useCursor(el: Element | string, scope?: Element) {
+export function useCursor(el: any | string, scope?: Element) {
   let els: Element[] | NodeListOf<Element>;
   const hoverState = useState("cursorState");
   function onMouseOver() {
@@ -8,18 +8,17 @@ export function useCursor(el: Element | string, scope?: Element) {
     hoverState.value = null;
   }
 
-  if (el instanceof Element) {
+  if (typeof el !== "string") {
     els = [el];
+  } else if (scope) {
+    els = scope.querySelectorAll(el as string);
   } else {
-    if (scope) {
-      els = scope.querySelectorAll(el);
-    } else {
-      els = document.querySelectorAll(el);
-    }
-    for (const e of els) {
-      e.addEventListener("mouseover", onMouseOver);
-      e.addEventListener("mouseleave", onMouseLeave);
-    }
+    els = document.querySelectorAll(el as string);
+  }
+
+  for (const e of els) {
+    e.addEventListener("mouseover", onMouseOver);
+    e.addEventListener("mouseleave", onMouseLeave);
   }
 
   onUnmounted(() => {

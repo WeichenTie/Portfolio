@@ -61,7 +61,7 @@ onUnmounted(() => {
 
 <style scoped>
 .project-card {
-  @apply pointer-events-auto flex flex-col gap-12;
+  @apply pointer-events-auto flex w-full max-w-[700px] flex-col gap-12;
 }
 
 .project-card img {
@@ -81,7 +81,7 @@ onUnmounted(() => {
   @apply aspect-[5/5];
 }
 .project-container-right .project-card:nth-of-type(1) {
-  @apply mt-[50%];
+  @apply mt-[50%] lg:mt-16;
 }
 .project-container-right .project-card:nth-of-type(1) img {
   @apply aspect-[5/5];

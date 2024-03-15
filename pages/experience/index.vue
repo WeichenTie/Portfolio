@@ -21,7 +21,20 @@
           my knowledge and expertise to the tech industry.
         </p>
       </div>
-      <div class="my-auto aspect-[3/4] rounded-2xl bg-red-400 lg:hidden"></div>
+      <div class="my-auto aspect-[3/4] overflow-hidden rounded-3xl lg:hidden">
+        <NuxtImg
+          :modifiers="{
+            rotate: null,
+          }"
+          :width="600"
+          :height="800"
+          format="webp"
+          fit="cover"
+          src="/images/experience/portrait.webp"
+          placeholder
+          class="h-full w-full scale-150 object-cover"
+        />
+      </div>
     </div>
 
     <h2 class="border-woodsmoke-800 mt-8 w-full border-b-2 text-3xl font-black">
