@@ -1,7 +1,7 @@
 <template>
   <div
     ref="container"
-    class="outer-container mt-36 flex min-h-screen items-center justify-center px-8"
+    class="outer-container mt-96 flex min-h-screen items-center justify-center px-8"
   >
     <div class="w-full max-w-[1440px]">
       <h2 class="text-6xl font-black">
@@ -10,41 +10,42 @@
       <div class="skillset-wrapper">
         <h3>Languages.</h3>
         <div class="flex flex-wrap gap-8">
-          <Icon
-            class="h-24 w-24 rounded-3xl bg-[#242938] duration-75 ease-out hover:scale-105"
-            :name="item.icon"
-            v-for="item in languages"
-          ></Icon>
+          <div v-for="item in languages" class="icon">
+            <Icon
+              class="icon h-24 w-24 rounded-3xl bg-[#242938]"
+              :name="item.icon"
+            ></Icon>
+          </div>
         </div>
       </div>
       <div class="skillset-wrapper">
         <h3>Frameworks and libraries.</h3>
         <div class="flex flex-wrap gap-8">
-          <Icon
-            class="h-24 w-24 rounded-3xl bg-[#242938] duration-75 ease-out hover:scale-105"
-            :name="item.icon"
-            v-for="item in frameworks"
-          ></Icon>
+          <div v-for="item in frameworks" class="icon">
+            <Icon
+              class="icon h-24 w-24 rounded-3xl bg-[#242938]"
+              :name="item.icon"
+            ></Icon>
+          </div>
         </div>
       </div>
       <div class="skillset-wrapper">
         <h3>Additional skills.</h3>
         <div class="flex flex-wrap gap-8">
-          <Icon
-            class="h-24 w-24 rounded-3xl bg-[#242938] text-orange-600 duration-75 ease-out hover:scale-105"
-            :name="item.icon"
-            v-for="item in soft_hardware"
-          ></Icon>
+          <div v-for="item in soft_hardware" class="icon">
+            <Icon
+              class="icon h-24 w-24 rounded-3xl bg-[#242938] text-orange-500"
+              :name="item.icon"
+            ></Icon>
+          </div>
         </div>
       </div>
       <div class="skillset-wrapper">
         <h3>Spoken Languages.</h3>
         <div class="flex flex-wrap gap-8">
-          <Icon
-            class="h-24 w-24 bg-[#f4f2ed] duration-75 ease-out hover:scale-105"
-            :name="item.icon"
-            v-for="item in spokenLanguages"
-          ></Icon>
+          <div v-for="item in spokenLanguages" class="icon">
+            <Icon class="h-24 w-24 bg-[#f4f2ed]" :name="item.icon"></Icon>
+          </div>
         </div>
       </div>
     </div>
@@ -71,12 +72,12 @@ onMounted(() => {
         start: "35% bottom",
       },
     });
-    tl.from("h2, .skillset-wrapper", {
+    tl.from("h2, h3, .icon", {
       opacity: 0,
       y: -10,
       duration: 0.75,
-      stagger: 0.5,
-    });
+      stagger: 0.03,
+    }).to;
   }, container.value);
 });
 

@@ -1,5 +1,9 @@
 <template>
-  <div ref="container" class="outer-container flex px-8 pb-[40vh]" id="contact">
+  <div
+    ref="container"
+    class="outer-container mt-80 flex px-8 pb-[40vh]"
+    id="contact"
+  >
     <div class="mx-auto flex h-full w-full max-w-[1440px] flex-col">
       <h2 class="col-span-2 my-24 text-6xl font-black">
         <span class="text-rose-600">Interested?</span> Lets talk.
@@ -51,6 +55,7 @@ gsap.registerPlugin(ScrollTrigger);
 let ctx: gsap.Context;
 const container = ref();
 onMounted(() => {
+  useCursor(".card-container", container.value);
   ctx = gsap.context((self) => {
     const tl = gsap.timeline({
       scrollTrigger: {
