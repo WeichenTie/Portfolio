@@ -29,6 +29,9 @@
 .project-blog-content img + p {
   @apply mt-8;
 }
+.project-blog-content table + p {
+  @apply mt-8;
+}
 .project-blog-content p + p {
   @apply mt-4;
 }
@@ -38,6 +41,15 @@
 .project-blog-content ul + p {
   @apply mt-4;
 }
+
+.project-blog-content table {
+  @apply mx-auto mt-8 border-collapse;
+}
+
+.project-blog-content table tr > * {
+  @apply border-2 border-neutral-800 px-4 py-2;
+}
+
 .project-blog-content h1 {
   @apply mt-16 text-6xl font-black text-rose-700;
 }
