@@ -50,6 +50,8 @@
 <script lang="ts" setup>
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useToast } from "@/components/ui/toast/use-toast";
+const { toast } = useToast();
 gsap.registerPlugin(ScrollTrigger);
 
 let ctx: gsap.Context;
@@ -82,7 +84,13 @@ onMounted(() => {
 });
 async function writeClipboardText(text: string) {
   try {
-    await navigator.clipboard.writeText(text);
+    await navigator.clipboard.writeText(text).then(() => {
+      toast({
+        title: "Email successfully copied to clipboard!",
+        duration: 3000,
+        variant: "success",
+      });
+    });
   } catch (error: any) {
     console.error(error.message);
   }

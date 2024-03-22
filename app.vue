@@ -4,6 +4,7 @@
   <div class="page-container">
     <NuxtPage></NuxtPage>
   </div>
+  <Toaster />
 </template>
 <style>
 .page-container {
@@ -11,4 +12,6 @@
 }
 </style>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Toaster from "@/components/ui/toast/Toaster.vue";
+</script>

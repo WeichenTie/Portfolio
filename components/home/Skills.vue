@@ -8,7 +8,7 @@
         <span class="text-teal-500">Skills</span> I offer.
       </h2>
       <div class="skillset-wrapper">
-        <h3>Languages.</h3>
+        <h3>Programming Languages.</h3>
         <div class="flex flex-wrap gap-8">
           <div v-for="item in languages" class="icon">
             <Icon

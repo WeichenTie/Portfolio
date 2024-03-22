@@ -15,7 +15,6 @@ showcased: false
 
 <BlogTechnologies :tags="technologies"></BlogTechnologies>
 
-
 ## Process
 
 ## Results

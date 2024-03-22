@@ -2,13 +2,18 @@
   <div class="grid-container min-h-screen">
     <div class="mb-8 mt-auto flex h-fit w-full flex-col gap-8">
       <a href="https://github.com/WeichenTie">
-        <Icon class="h-16 w-16" name="logos:github-icon" />
+        <Icon
+          class="block h-16 w-16 lg:h-12 lg:w-12 sm:h-10 sm:w-10"
+          name="logos:github-icon"
+        />
       </a>
       <a href="https://www.linkedin.com/in/weichen-tie-bb783020b/"
-        ><Icon class="h-16 w-16" name="logos:linkedin-icon"
+        ><Icon
+          class="block h-16 w-16 lg:h-12 lg:w-12 sm:h-10 sm:w-10"
+          name="logos:linkedin-icon"
       /></a>
     </div>
-    <h1>
+    <h1 class="py-24">
       <span class="relative">
         <span>WEICHEN TIE&nbsp;</span>
         <span class="subtext phonetic text-orange-400 text-opacity-70"

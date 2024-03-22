@@ -41,8 +41,9 @@
                 <span
                   class="inline-block text-sm leading-none opacity-40"
                   v-for="tag in item.technologies"
-                  >#{{ tag }}&nbsp;</span
                 >
+                  #{{ tag }}&nbsp;
+                </span>
               </div>
             </div>
           </div>
@@ -54,8 +55,13 @@
 
 <script setup lang="ts">
 const container = ref();
+const { setDarkMode } = useNavbar();
 onMounted(() => {
   useCursor(".card", container.value);
+  setDarkMode(true);
+});
+onUnmounted(() => {
+  setDarkMode(false);
 });
 </script>
 
