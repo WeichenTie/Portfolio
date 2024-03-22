@@ -26,7 +26,11 @@
       <span>ENGINEER</span>
     </h1>
     <div class="mb-8 mt-auto flex h-fit w-full items-center justify-end">
-      <img src="/images/pointers.svg" alt="arrow" />
+      <img
+        class="min-h-56 min-w-4 object-cover"
+        src="/images/pointers.svg"
+        alt="arrow"
+      />
       <p class="[text-orientation:mixed] [writing-mode:vertical-rl]">
         Scroll down for more.
       </p>

@@ -95,7 +95,7 @@ onUnmounted(() => {
     class="outer-container flex min-h-[max(100vh,1200px)] items-center justify-center px-8"
   >
     <div class="grid max-w-[1440px] grid-cols-2">
-      <div>
+      <div class="lg:col-span-2">
         <h2 class="text-6xl font-black">
           A <span class="text-teal-500">slice</span> of me.
         </h2>
@@ -108,14 +108,14 @@ onUnmounted(() => {
         <p class="splt mt-8">
           If that sounds like what you need, let's get in touch!
         </p>
-        <div class="btn-group xs:flex-col xs:gap-4 mt-8 flex justify-end gap-6">
+        <div class="btn-group xs:gap-4 mt-8 flex justify-end gap-6 sm:flex-col">
           <NuxtLink to="/Experience" class="btn-secondary">
             EXPERIENCE
           </NuxtLink>
           <NuxtLink to="/Experience" class="btn-primary"> CONTACT ME </NuxtLink>
         </div>
       </div>
-      <div class="relative flex items-center justify-center md:hidden">
+      <div class="relative flex items-center justify-center lg:hidden">
         <div
           ref="c1"
           class="absolute top-1/2 aspect-[45/35] w-[70%] max-w-[450px] -translate-y-[100%] -rotate-6 overflow-hidden rounded-3xl bg-red-800"
@@ -126,7 +126,7 @@ onUnmounted(() => {
             :height="350"
             format="webp"
             fit="cover"
-            src="/images/about/3.JPG"
+            src="/images/about/2.webp"
             placeholder
           />
         </div>
@@ -139,7 +139,7 @@ onUnmounted(() => {
             :width="450"
             :height="350"
             format="webp"
-            src="/images/about/2.webp"
+            src="/images/about/1.webp"
             placeholder
           />
         </div>
@@ -152,7 +152,7 @@ onUnmounted(() => {
             :width="450"
             :height="350"
             format="webp"
-            src="/images/about/1.webp"
+            src="/images/about/3.JPG"
             placeholder
           />
         </div>

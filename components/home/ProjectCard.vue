@@ -1,12 +1,14 @@
 <template>
   <div class="project-card" ref="container">
     <NuxtLink :to="data._path" class="contents">
-      <NuxtImg
-        fit="cover"
-        class="w-full object-cover"
-        format="webp"
-        :src="data.thumbnail"
-      ></NuxtImg>
+      <div class="img-wrapper">
+        <NuxtImg
+          fit="cover"
+          class="w-full object-cover"
+          format="webp"
+          :src="data.thumbnail"
+        ></NuxtImg>
+      </div>
       <div>
         <h3 class="font-display text-3xl font-bold">{{ data.title }}</h3>
         <span
@@ -23,12 +25,12 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
-let ctx: gsap.Context;
 const props = defineProps<{
   flip?: boolean;
   data: any;
 }>();
 
+let ctx: gsap.Context;
 const container = ref();
 
 onMounted(() => {
@@ -64,10 +66,12 @@ onUnmounted(() => {
   @apply pointer-events-auto flex w-full max-w-[700px] flex-col gap-12;
 }
 
-.project-card img {
-  @apply overflow-hidden rounded-[4rem] shadow-xl shadow-pampas-950  duration-300 hover:shadow-pampas-800;
+.img-wrapper {
+  @apply overflow-hidden rounded-[4rem] shadow-xl shadow-pampas-950  duration-300  hover:shadow-pampas-800;
 }
-
+.img-wrapper > img {
+  @apply duration-300 hover:scale-105;
+}
 .project-container-left .project-card:nth-of-type(1) img {
   @apply aspect-[5/6.5];
 }

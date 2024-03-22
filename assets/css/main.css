@@ -26,5 +26,5 @@
   }
   .btn-secondary-dark {
     @apply btn border-2 border-pampas-100 text-pampas-100;
-  }  
+  }
 }
