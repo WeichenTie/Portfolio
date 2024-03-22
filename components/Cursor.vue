@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import Bowser from "bowser";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -33,6 +34,10 @@ function onMouseMove(e: MouseEvent) {
 }
 
 onMounted(() => {
+  if (Bowser.parse(window.navigator.userAgent).platform.type === "mobile") {
+    cursor.value?.classList.add("hidden");
+    return;
+  }
   window.addEventListener("mousemove", onMouseMove);
   function onFrame(time: number) {
     if (!hide.value) {
