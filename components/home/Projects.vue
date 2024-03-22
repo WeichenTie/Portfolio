@@ -87,7 +87,7 @@ onUnmounted(() => {
 }
 
 .view-all-card {
-  @apply flex w-full max-w-[700px] flex-1 items-center justify-center rounded-[4rem] border-4  text-4xl font-black text-pampas-100 shadow-xl  shadow-pampas-950 duration-300 hover:bg-pampas-100 hover:text-neutral-900 hover:shadow-pampas-800 lg:aspect-square;
+  @apply shadow-glow flex w-full max-w-[700px] flex-1 items-center justify-center rounded-[4rem] border-4 px-4 text-center font-display text-4xl font-black text-pampas-100  shadow-pampas-950 duration-300 hover:bg-pampas-100 hover:text-neutral-900 hover:shadow-pampas-800 lg:aspect-square;
 }
 
 .project-container-wrapper {

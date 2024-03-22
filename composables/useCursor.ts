@@ -1,4 +1,9 @@
+import Bowser from "bowser";
+
 export function useCursor(el: any | string, scope?: Element) {
+  if (Bowser.parse(window.navigator.userAgent).platform.type === "mobile") {
+    return;
+  }
   let els: Element[] | NodeListOf<Element>;
   const hoverState = useState("cursorState");
   function onMouseOver() {

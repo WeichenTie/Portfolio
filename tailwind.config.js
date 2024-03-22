@@ -70,6 +70,9 @@ module.exports = {
           950: "#2c231e",
         },
       },
+      boxShadow: {
+        glow: "0 0 32px 5px",
+      },
       fontSize: {
         "11xl": [
           "8rem",

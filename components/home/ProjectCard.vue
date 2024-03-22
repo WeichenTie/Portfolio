@@ -67,7 +67,7 @@ onUnmounted(() => {
 }
 
 .img-wrapper {
-  @apply overflow-hidden rounded-[4rem] shadow-xl shadow-pampas-950  duration-300  hover:shadow-pampas-800;
+  @apply shadow-glow overflow-hidden rounded-[4rem] shadow-pampas-950  duration-300  hover:shadow-pampas-800;
 }
 .img-wrapper > img {
   @apply duration-300 hover:scale-105;
