@@ -30,7 +30,7 @@ export default defineNuxtConfig({
   },
   content: {
     highlight: {
-      langs: ["js", "ts", "glsl"],
+      langs: ["js", "ts", "glsl", "c++", "c", "hlsl"],
     },
   },
 });
