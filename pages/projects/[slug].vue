@@ -77,6 +77,6 @@
 }
 
 .project-blog-content pre code .highlighted {
-  @apply bg-teal-500 bg-opacity-30;
+  @apply bg-green-500 bg-opacity-30;
 }
 </style>

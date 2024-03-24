@@ -14,7 +14,7 @@
         <span
           class="mt-2 inline-block text-lg italic opacity-40"
           v-for="tag in data.technologies"
-          >#{{ tag }}&nbsp;</span
+          ><span class="text-neutral-500">#</span>{{ tag }}&nbsp;</span
         >
       </div>
     </NuxtLink>
@@ -67,7 +67,7 @@ onUnmounted(() => {
 }
 
 .img-wrapper {
-  @apply shadow-glow overflow-hidden rounded-[4rem] shadow-pampas-950  duration-300  hover:shadow-pampas-800;
+  @apply overflow-hidden rounded-[4rem] shadow-glow shadow-pampas-950  duration-300  hover:shadow-pampas-800;
 }
 .img-wrapper > img {
   @apply duration-300 hover:scale-105;

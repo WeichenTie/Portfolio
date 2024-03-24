@@ -104,6 +104,6 @@ onUnmounted(() => {
 
 <style>
 .cursor {
-  @apply pointer-events-none fixed z-50 flex aspect-square w-[1vw] items-center justify-center rounded-full border-[2px] border-white bg-white bg-opacity-0 mix-blend-difference;
+  @apply pointer-events-none fixed z-[1000] flex aspect-square w-[1vw] items-center justify-center rounded-full border-[2px] border-white bg-white bg-opacity-0 mix-blend-difference;
 }
 </style>

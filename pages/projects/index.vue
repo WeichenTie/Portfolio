@@ -23,14 +23,9 @@
           :key="item._path"
           :to="item._path"
         >
-          <div
-            class="card col-span-3 mx-auto flex aspect-[8/12] h-full w-full max-w-[350px] flex-col overflow-hidden rounded-3xl bg-neutral-800 xl:col-span-4 lg:col-span-6 [@media(max-width:700px)]:col-span-full"
-          >
-            <div>
-              <NuxtImg
-                class="aspect-[16/9] h-full w-full object-cover"
-                :src="item.thumbnail"
-              ></NuxtImg>
+          <div class="card group">
+            <div class="aspect-video w-full flex-none overflow-hidden">
+              <NuxtImg :src="item.thumbnail"></NuxtImg>
             </div>
             <div class="flex h-full flex-col px-4 pb-4 pt-8">
               <h2 class="font-display text-2xl text-indigo-300">
@@ -42,7 +37,7 @@
                   class="inline-block text-sm leading-none opacity-40"
                   v-for="tag in item.technologies"
                 >
-                  #{{ tag }}&nbsp;
+                  <span class="text-neutral-500">#</span>{{ tag }}&nbsp;
                 </span>
               </div>
             </div>
@@ -67,6 +62,10 @@ onUnmounted(() => {
 
 <style scoped>
 .card {
-  @apply overflow-hidden shadow shadow-pampas-950  duration-300 hover:shadow-pampas-800;
+  @apply col-span-3 mx-auto  flex aspect-[8/12] h-full w-full max-w-[350px] flex-col overflow-hidden rounded-3xl bg-neutral-800  xl:col-span-4 lg:col-span-6 [@media(max-width:700px)]:col-span-full;
+}
+
+img {
+  @apply aspect-[16/9] w-full object-cover duration-300 group-hover:scale-105;
 }
 </style>
