@@ -14,7 +14,7 @@
 
 <style>
 .project-blog-container {
-  @apply mx-auto w-full max-w-[70ch]  px-4 py-24 text-xl;
+  @apply mx-auto w-full max-w-[70ch]  bg-inherit px-4 py-24 text-xl;
 }
 .project-blog-container .thumbnail {
   @apply aspect-[16/10] w-full rounded-3xl object-cover shadow-md;

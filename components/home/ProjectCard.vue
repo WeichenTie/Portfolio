@@ -65,7 +65,6 @@ onUnmounted(() => {
 .project-card {
   @apply pointer-events-auto flex w-full max-w-[700px] flex-col gap-12;
 }
-
 .img-wrapper {
   @apply overflow-hidden rounded-[4rem] shadow-glow shadow-pampas-950  duration-300  hover:shadow-pampas-800;
 }
