@@ -42,6 +42,10 @@
   @apply mt-4;
 }
 
+.project-blog-content a {
+  @apply text-rose-700 underline;
+}
+
 .project-blog-content table {
   @apply mx-auto mt-8 border-collapse;
 }
