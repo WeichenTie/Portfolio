@@ -42,7 +42,7 @@
   @apply mt-4;
 }
 
-.project-blog-content a {
+.project-blog-content > p > a {
   @apply text-rose-700 underline;
 }
 

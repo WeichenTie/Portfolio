@@ -4,12 +4,15 @@ thumbnail: "/images/projects/particle2d/thumbnail.webp"
 description: "Particle simulation using vertex transformations in GLSL where you can click and drag around to make particles follow your cursor."
 technologies: ["GLSL", "WebGL"]
 assets: "/images/projects/portfolio"
+github: "https://github.com/WeichenTie/06-Particle-Attractor"
+demo: "https://weichentie.github.io/06-Particle-Attractor"
 showcased: false
-source: "https://github.com/WeichenTie/ParticleAttractor"
-demo: "https://weichentie.github.io/ParticleAttractor/"
 ---
 
 # {{title}}
+
+<view-github-button :to="github"></view-github-button>
+<view-demo-button :to="demo"></view-demo-button>
 
 ## Project Description
 
