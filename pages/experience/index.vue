@@ -152,3 +152,9 @@
     </ul>
   </div>
 </template>
+
+<script setup lang="ts">
+useSeoMeta({
+  title: "Experience",
+});
+</script>

@@ -52,6 +52,10 @@
 <script setup lang="ts">
 const container = ref();
 const { setDarkMode } = useNavbar();
+useSeoMeta({
+  title: "Projects",
+});
+
 onMounted(() => {
   useCursor(".card", container.value);
   setDarkMode(true);
