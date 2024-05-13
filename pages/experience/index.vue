@@ -23,9 +23,6 @@
       </div>
       <div class="my-auto aspect-[3/4] overflow-hidden rounded-3xl lg:hidden">
         <NuxtImg
-          :modifiers="{
-            rotate: null,
-          }"
           :width="600"
           :height="800"
           format="webp"

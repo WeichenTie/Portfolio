@@ -121,7 +121,6 @@ onUnmounted(() => {
           class="absolute top-1/2 aspect-[45/35] w-[70%] max-w-[450px] -translate-y-[100%] -rotate-6 overflow-hidden rounded-3xl bg-red-800"
         >
           <NuxtImg
-            :modifiers="{ rotate: null }"
             :width="450"
             :height="350"
             format="webp"
@@ -135,7 +134,6 @@ onUnmounted(() => {
           class="absolute top-1/2 aspect-[45/35] w-[70%] max-w-[450px] -translate-y-[45%] rotate-6 overflow-hidden rounded-3xl bg-green-800"
         >
           <NuxtImg
-            :modifiers="{ rotate: null }"
             :width="450"
             :height="350"
             format="webp"
@@ -148,7 +146,6 @@ onUnmounted(() => {
           class="absolute top-1/2 aspect-[45/35] w-[70%] max-w-[450px] -translate-y-[-10%] -rotate-6 overflow-hidden rounded-3xl bg-neutral-800"
         >
           <NuxtImg
-            :modifiers="{ rotate: null }"
             :width="450"
             :height="350"
             format="webp"
