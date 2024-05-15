@@ -1,0 +1,1 @@
+import{g as n,o as e,c as s,F as o,m as r,t as l}from"./entry.C9w4e65z.js";const c={class:"flex w-full flex-wrap gap-x-6 gap-y-4 italic opacity-50"},i={class:"inline"},m=n({__name:"BlogTechnologies",props:{tags:{}},setup(p){return(t,_)=>(e(),s("div",c,[(e(!0),s(o,null,r(t.tags,a=>(e(),s("span",i,"#"+l(a),1))),256))]))}});export{m as default};
