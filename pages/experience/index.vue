@@ -29,7 +29,7 @@
           fit="cover"
           src="/images/experience/portrait.webp"
           placeholder
-          class="h-full w-full scale-150 object-cover"
+          class="h-full w-full object-cover"
         />
       </div>
     </div>
@@ -40,14 +40,16 @@
     <ol class="ml-12 mt-4">
       <li>
         <span class="flex justify-between font-normal">
-          <p>B.Eng Mechatronics Engineering / B.Sci Computer Science</p>
+          <p class="font-bold">
+            B.Eng Mechatronics Engineering / B.Sci Computer Science
+          </p>
           <p>2020-2025</p>
         </span>
         <p class="italic">University of NSW | Current WAM: 79.318</p>
       </li>
       <li>
         <span class="flex justify-between font-normal">
-          <p>Year 12 High School</p>
+          <p class="font-bold">Year 12 High School</p>
           <p>2014-2019</p>
         </span>
         <p class="italic">Caringbah High School | ATAR: 96.75</p>
@@ -56,24 +58,24 @@
     <h2 class="border-woodsmoke-800 mt-8 border-b-2 text-3xl font-black">
       Skills
     </h2>
-    <div class="ml-12 mt-4">
+    <div class="ml-12 mt-4 space-y-2">
       <p>
-        <span class="font-normal">Programming Languages:</span>
+        <span class="font-bold">Programming Languages:</span>
         HTML, CSS, Typescript, Javascript, Sass, Python, Java, C, C++, C#, GLSL,
-        HLSL
+        HLSL, Verilog
       </p>
       <p>
-        <span class="font-normal">API's and Libraries:</span> NextJS, NuxtJS,
+        <span class="font-bold">API's and Libraries:</span> NextJS, NuxtJS,
         SvelteKit, React, Vue, Svelte, Tailwind, OpenGL, Django, .Net, Flask,
         Postgres SQL
       </p>
       <p>
-        <span class="font-normal">Software and Hardware:</span> Github, Jira,
-        NPM, Visual Studio Code, Unreal Engine, Unity Engine, Raspberry Pi,
-        Ardiuno, 3D Printing, Fusion360
+        <span class="font-bold">Software and Hardware:</span> Xilinx, Fusion360,
+        Solidworks, Autodesk, Github, Jira, NPM, Visual Studio Code, Unreal
+        Engine, Unity Engine, Raspberry Pi, Ardiuno, 3D Printing, Fusion360
       </p>
       <p>
-        <span class="font-normal">Social:</span> Mandarin, Communication,
+        <span class="font-bold">Social:</span> Mandarin, Communication,
         Leadership, Problem Solving
       </p>
     </div>
@@ -82,51 +84,59 @@
     </h2>
     <div class="ml-12">
       <div>
-        <p class="mt-4 font-normal">Feb 2022 - Present</p>
+        <p class="mt-4 font-bold">Feb 2022 - Present</p>
         <p class="italic">No Gaps Dental - Receptionist</p>
       </div>
-      <ul class="ml-12 mt-2 list-disc">
-        <li>Accurately collect payment from customers using HICAPS machine.</li>
+      <ul class="ml-12 mt-2 list-disc space-y-2">
+        <li>
+          Greeted and assisted patients, managed appointments, and maintained
+          patient records using practice management software.
+        </li>
         <li>Booking in patients both in person and via phone calls.</li>
         <li>
-          Provides excellent customer service by talking to customers after
-          treatment to improve satisfaction.
+          Communicated effectively with patients, colleagues, and insurance
+          companies via phone and email.
+        </li>
+        <li>
+          Maintained accurate and up-to-date patient records, both digitally and
+          in physical files.
         </li>
         <li>
           Frequently communicates with dentists and manager to provide the best
           course of actions for the customer.
         </li>
         <li>
-          Helped with installing and debugging various products such as printers
-          and created macros to improve convenience for all reception team
-          members.
+          Resolved scheduling conflicts, addressed patient inquiries, and
+          handled unexpected situations calmly and efficiently.
         </li>
       </ul>
       <div>
-        <p class="mt-4 font-normal">Jan 2017 - Nov 2017</p>
-        <p class="italic">KFC - Food Service Team Member</p>
+        <p class="mt-4 font-bold">Apr 2022 - Nov 2023</p>
+        <p class="italic">Private Tutor - Computer Science</p>
       </div>
-      <ul class="ml-12 mt-2 list-disc">
+      <ul class="ml-12 mt-2 list-disc space-y-2">
         <li>
-          Prepared food in a fast-paced industry whilst following strict heath
-          guidelines.
-        </li>
-        <li>Works efficiently and accurately under stress.</li>
-        <li>
-          Communicates and coordinates with other team members to deliver
-          products punctually during peak hours.
+          Provided individualised instruction to students of varying skill
+          levels, adapting teaching methods to match individual learning styles.
         </li>
         <li>
-          Excellent time management for balancing between preparing food and
-          sanitation.
+          Explained complex technical concepts in clear, concise terms, fostered
+          a supportive learning environment, and built rapport with students.
         </li>
-        <li>Proactively helps other team members when ahead of schedule.</li>
+        <li>
+          Evaluated student progress through assignments, quizzes, and projects,
+          providing constructive feedback to help students improve.
+        </li>
+        <li>
+          Guided students through debugging exercises, encouraged independent
+          problem-solving, and promoted critical thinking skills.
+        </li>
       </ul>
     </div>
     <h2 class="border-woodsmoke-800 mt-8 border-b-2 text-3xl font-black">
       Awards and Acknowledgements
     </h2>
-    <ul class="ml-12 mt-4 list-disc">
+    <ul class="ml-12 mt-2 list-disc space-y-2">
       <li>
         <span class="font-normal">UNSW</span> - COMP3421 Top 10 Game Awards
       </li>

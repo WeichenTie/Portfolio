@@ -2,10 +2,9 @@
 export default defineNuxtConfig({
   devtools: { enabled: false },
   css: ["~/assets/css/main.css"],
-  // nitro: { static: true },
   app: {
-    // baseURL: "/Portfolio/", // baseURL: '/<repository>/'
-    // buildAssetsDir: "assets", // don't use "_" at the begining of the folder name to avoids nojkill conflict
+    baseURL: "/Portfolio/", // baseURL: '/<repository>/'
+    buildAssetsDir: "assets", // don't use "_" at the begining of the folder name to avoids nojkill conflict
   },
   modules: [
     "@nuxtjs/tailwindcss",
