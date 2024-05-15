@@ -3,6 +3,9 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   css: ["~/assets/css/main.css"],
   app: {
+    head: {
+      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    },
     baseURL: "/Portfolio/", // baseURL: '/<repository>/'
     buildAssetsDir: "assets", // don't use "_" at the begining of the folder name to avoids nojkill conflict
   },

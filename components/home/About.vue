@@ -112,7 +112,7 @@ onUnmounted(() => {
           <NuxtLink to="/Experience" class="btn-secondary">
             EXPERIENCE
           </NuxtLink>
-          <NuxtLink to="/Experience" class="btn-primary"> CONTACT ME </NuxtLink>
+          <NuxtLink to="/#contact" class="btn-primary"> CONTACT ME </NuxtLink>
         </div>
       </div>
       <div class="relative flex items-center justify-center lg:hidden">
