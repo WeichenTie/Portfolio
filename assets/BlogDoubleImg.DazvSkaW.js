@@ -1,1 +1,0 @@
-import{f as n}from"./node.Dnd51l0P.js";import{y as l,_ as o,o as f,c as a}from"./entry.Bj2juxox.js";const u=(e,t,r,...c)=>e[t]?l({...e,[t]:()=>n(e[t](),r==null?void 0:r.unwrap)},t,r,...c):l(e,t,r,...c),_={},d={class:"blog-double-img flex w-full gap-4"};function i(e,t){return f(),a("div",d,[u(e.$slots,"default")])}const m=o(_,[["render",i]]);export{m as default};
