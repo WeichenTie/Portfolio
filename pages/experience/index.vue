@@ -25,7 +25,6 @@
         <NuxtImg
           :width="600"
           :height="800"
-          format="webp"
           fit="cover"
           src="/images/experience/portrait.webp"
           placeholder

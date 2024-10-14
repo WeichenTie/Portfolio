@@ -123,7 +123,6 @@ onUnmounted(() => {
           <NuxtImg
             :width="450"
             :height="350"
-            format="webp"
             fit="cover"
             src="/images/about/2.webp"
             placeholder
@@ -136,7 +135,6 @@ onUnmounted(() => {
           <NuxtImg
             :width="450"
             :height="350"
-            format="webp"
             src="/images/about/1.webp"
             placeholder
           />
@@ -148,7 +146,6 @@ onUnmounted(() => {
           <NuxtImg
             :width="450"
             :height="350"
-            format="webp"
             src="/images/about/3.jpg"
             placeholder
           />
