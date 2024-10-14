@@ -5,7 +5,6 @@
         <NuxtImg
           fit="cover"
           class="w-full object-cover"
-          format="webp"
           :src="data.thumbnail"
         ></NuxtImg>
       </div>
