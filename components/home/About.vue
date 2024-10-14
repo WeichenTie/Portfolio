@@ -149,7 +149,7 @@ onUnmounted(() => {
             :width="450"
             :height="350"
             format="webp"
-            src="/images/about/3.JPG"
+            src="/images/about/3.jpg"
             placeholder
           />
         </div>
