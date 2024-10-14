@@ -4,9 +4,7 @@
     id="container"
     class="min-h-screen w-full bg-neutral-900 px-8 py-[200px] text-pampas-100"
   >
-    <h1
-      class="mx-auto mb-16 w-full max-w-[1440px] font-display text-6xl font-bold"
-    >
+    <h1 class="mx-auto mb-16 w-full max-w-[1440px] text-6xl font-bold">
       These are all my works.
     </h1>
     <div
@@ -29,7 +27,7 @@
               <NuxtImg :src="item.thumbnail"></NuxtImg>
             </div>
             <div class="flex h-full flex-col px-4 pb-4 pt-8">
-              <h2 class="font-display text-2xl text-indigo-300">
+              <h2 class="text-2xl font-bold text-indigo-300">
                 {{ item.title }}
               </h2>
               <p class="mt-4 text-base opacity-80">{{ item.description }}</p>

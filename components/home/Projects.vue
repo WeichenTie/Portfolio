@@ -44,9 +44,7 @@ onUnmounted(() => {
 <template>
   <div ref="container" class="container relative z-20 text-pampas-100">
     <div class="container-inner-wrapper">
-      <h2
-        class="col-span-full col-start-2 mt-auto font-display text-6xl font-bold"
-      >
+      <h2 class="col-span-full col-start-2 mt-auto text-6xl font-bold">
         Works I'm <span class="text-rose-500">proud</span> of.
       </h2>
 
@@ -87,7 +85,7 @@ onUnmounted(() => {
 }
 
 .view-all-card {
-  @apply shadow-glow flex w-full max-w-[700px] flex-1 items-center justify-center rounded-[4rem] border-4 px-4 text-center font-display text-4xl font-black text-pampas-100  shadow-pampas-950 duration-300 hover:bg-pampas-100 hover:text-neutral-900 hover:shadow-pampas-800 lg:aspect-square;
+  @apply flex w-full max-w-[700px] flex-1 items-center justify-center rounded-[4rem] border-4 px-4 text-center text-4xl font-black text-pampas-100 shadow-glow  shadow-pampas-950 duration-300 hover:bg-pampas-100 hover:text-neutral-900 hover:shadow-pampas-800 lg:aspect-square;
 }
 
 .project-container-wrapper {

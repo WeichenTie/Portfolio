@@ -10,7 +10,7 @@
         ></NuxtImg>
       </div>
       <div>
-        <h3 class="font-display text-3xl font-bold">{{ data.title }}</h3>
+        <h3 class="text-3xl font-bold">{{ data.title }}</h3>
         <span
           class="mt-2 inline-block text-lg italic opacity-40"
           v-for="tag in data.technologies"
