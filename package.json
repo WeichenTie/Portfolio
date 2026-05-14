@@ -7,7 +7,6 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "deploy": "gh-pages -d dist --nojekyll --dotfiles",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
@@ -21,11 +20,17 @@
     "lucide-vue-next": "^0.361.0",
     "nuxt": "^3.10.3",
     "radix-vue": "^1.5.3",
+    "sharp": "^0.34.5",
     "split-type": "^0.3.4",
     "tailwind-merge": "^2.2.2",
     "tailwindcss-animate": "^1.0.7",
     "vue": "^3.4.19",
     "vue-router": "^4.3.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "sharp": "^0.34.5"
+    }
   },
   "devDependencies": {
     "@nuxt/content": "^2.12.0",

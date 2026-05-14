@@ -1,6 +1,5 @@
 <template>
   <HomeLanding></HomeLanding>
-  <!-- <HomeFeature></HomeFeature> -->
   <HomeAbout></HomeAbout>
   <HomeProjects></HomeProjects>
   <HomeSkills></HomeSkills>

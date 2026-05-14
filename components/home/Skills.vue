@@ -8,52 +8,71 @@
         <span class="text-teal-500">Skills</span> I offer.
       </h2>
       <div class="skillset-wrapper">
-        <h3>Programming Languages.</h3>
-        <div class="flex flex-wrap gap-8">
-          <div v-for="item in languages" class="icon">
-            <Icon
-              class="icon h-24 w-24 rounded-3xl bg-[#242938]"
-              :name="item.icon"
-            ></Icon>
+        <h3>Languages.</h3>
+        <div class="grid grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-4">
+          <div v-for="item in languages" :key="item.name" class="skill-card">
+            <Icon class="skill-icon" :name="item.icon" />
+            <div class="flex flex-col gap-1">
+              <span class="skill-name">{{ item.name }}</span>
+              <span class="skill-flavor">{{ item.flavor }}</span>
+            </div>
           </div>
         </div>
       </div>
       <div class="skillset-wrapper">
-        <h3>Frameworks and libraries.</h3>
-        <div class="flex flex-wrap gap-8">
-          <div v-for="item in frameworks" class="icon">
-            <Icon
-              class="icon h-24 w-24 rounded-3xl bg-[#242938]"
-              :name="item.icon"
-            ></Icon>
+        <h3>Frameworks.</h3>
+        <div class="grid grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-4">
+          <div v-for="item in frameworks" :key="item.name" class="skill-card">
+            <Icon class="skill-icon" :name="item.icon" />
+            <div class="flex flex-col gap-1">
+              <span class="skill-name">{{ item.name }}</span>
+              <span class="skill-flavor">{{ item.flavor }}</span>
+            </div>
           </div>
         </div>
       </div>
       <div class="skillset-wrapper">
-        <h3>Additional skills.</h3>
-        <div class="flex flex-wrap gap-8">
-          <div v-for="item in soft_hardware" class="icon">
-            <Icon
-              class="icon h-24 w-24 rounded-3xl bg-[#242938] text-orange-500"
-              :name="item.icon"
-            ></Icon>
-          </div>
-        </div>
-      </div>
-      <div class="skillset-wrapper">
-        <h3>Spoken Languages.</h3>
-        <div class="flex flex-wrap gap-8">
-          <div v-for="item in spokenLanguages" class="icon">
-            <Icon class="h-24 w-24 bg-[#f4f2ed]" :name="item.icon"></Icon>
+        <h3>Developer Tools.</h3>
+        <div class="grid grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-4">
+          <div v-for="item in devTools" :key="item.name" class="skill-card">
+            <Icon class="skill-icon" :name="item.icon" />
+            <div class="flex flex-col gap-1">
+              <span class="skill-name">{{ item.name }}</span>
+              <span class="skill-flavor">{{ item.flavor }}</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
+
 <style lang="postcss" scoped>
 h3 {
   @apply mb-6 mt-12 text-2xl font-semibold;
+}
+
+.skill-card {
+  @apply flex flex-row items-start gap-4 rounded-2xl border border-pampas-300 bg-pampas-50 p-5;
+  transition:
+    border-color 300ms ease,
+    box-shadow 300ms ease;
+
+  &:hover {
+    @apply border-neutral-900/60 shadow-sm;
+  }
+}
+
+.skill-icon {
+  @apply h-10 w-10 shrink-0;
+}
+
+.skill-name {
+  @apply font-display text-xl font-bold leading-tight;
+}
+
+.skill-flavor {
+  @apply font-primary text-sm text-neutral-500;
 }
 </style>
 
@@ -65,63 +84,44 @@ gsap.registerPlugin(ScrollTrigger);
 let ctx: gsap.Context;
 const container = ref();
 onMounted(() => {
-  ctx = gsap.context((self) => {
+  ctx = gsap.context(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: container.value,
         start: "35% bottom",
       },
     });
-    tl.from("h2, h3, .icon", {
+    tl.from("h2, h3, .skill-card", {
       opacity: 0,
       y: -10,
       duration: 0.75,
       stagger: 0.03,
-    }).to;
+    });
   }, container.value);
 });
 
+onUnmounted(() => ctx?.revert());
+
 const languages = [
-  { name: "Html", icon: "skill-icons:html" },
-  { name: "Css-3", icon: "skill-icons:css" },
-  { name: "Javascript", icon: "skill-icons:javascript" },
-  { name: "Typescript", icon: "skill-icons:typescript" },
-  { name: "Sass", icon: "skill-icons:sass" },
-  { name: "C", icon: "skill-icons:c" },
-  { name: "C-Sharp", icon: "skill-icons:cs" },
-  { name: "Cpp", icon: "skill-icons:cpp" },
-  { name: "Java", icon: "skill-icons:java-dark" },
-  { name: "Python", icon: "skill-icons:python-dark" },
-];
-const frameworks = [
-  { name: "Nextjs", icon: "skill-icons:nextjs-dark" },
-  { name: "Nuxt", icon: "skill-icons:nuxtjs-dark" },
-  { name: "React", icon: "skill-icons:react-dark" },
-  { name: "Vue", icon: "skill-icons:vuejs-dark" },
-  { name: "Svelte", icon: "skill-icons:svelte" },
-  { name: "Tailwind", icon: "skill-icons:tailwindcss-dark" },
-  { name: "Opengl", icon: "logos:opengl" },
-  { name: "Django", icon: "skill-icons:django" },
-  { name: "dotNet", icon: "skill-icons:dotnet" },
-  { name: "Flask", icon: "skill-icons:flask-dark" },
-  { name: "NodeJs", icon: "skill-icons:nodejs-dark" },
-  { name: "Postgres", icon: "skill-icons:postgresql-dark" },
-  { name: "Unity", icon: "skill-icons:unity-dark" },
-  { name: "Unreal", icon: "skill-icons:unrealengine" },
-];
-const soft_hardware = [
-  { name: "Figma", icon: "skill-icons:figma-dark" },
-  { name: "Git", icon: "skill-icons:git" },
-  { name: "raspberrypi", icon: "skill-icons:raspberrypi-dark" },
-  { name: "Arduino", icon: "skill-icons:arduino" },
-  { name: "Fusion360", icon: "Fusion360Icon" },
-  { name: "Prusa", icon: "PrusaSlicerIcon" },
-  { name: "3D Printing", icon: "cbi:3dprinter-printing" },
-  { name: "Electronics", icon: "flat-color-icons:electronics" },
+  { name: "HTML", flavor: "Technically not a language", icon: "skill-icons:html" },
+  { name: "CSS", flavor: "Centering divs since forever", icon: "skill-icons:css" },
+  { name: "TypeScript", flavor: "JavaScript that argues back", icon: "skill-icons:typescript" },
+  { name: "PHP", flavor: "Still powering 78% of the web", icon: "skill-icons:php-dark" },
+  { name: "Python", flavor: "Readable until it's yours", icon: "skill-icons:python-dark" },
+  { name: "MySQL", flavor: "Rows and rows of data", icon: "skill-icons:mysql-dark" },
 ];
 
-const spokenLanguages = [
-  { name: "English", icon: "flagpack:au" },
-  { name: "Mandarin", icon: "flagpack:cn" },
+const frameworks = [
+  { name: "Angular", flavor: "The opinionated framework", icon: "skill-icons:angular-dark" },
+  { name: "NextJS", flavor: "React but it does more stuff", icon: "skill-icons:nextjs-dark" },
+  { name: "Symfony", flavor: "Where PHP actually makes sense", icon: "logos:symfony" },
+  { name: "Flask", flavor: "Minimal until in production", icon: "skill-icons:flask-dark" },
+  { name: "RabbitMQ", flavor: "Shouting into a queue, it works", icon: "logos:rabbitmq-icon" },
+];
+
+const devTools = [
+  { name: "Docker", flavor: "It works on our machine", icon: "skill-icons:docker" },
+  { name: "Kibana", flavor: "Retrospective debugging", icon: "logos:kibana" },
+  { name: "Grafana", flavor: "Pretty graphs wahoo", icon: "logos:grafana" },
 ];
 </script>

@@ -1,75 +1,48 @@
-# Nuxt 3 Minimal Starter
+# Weichen Tie - Portfolio
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+My personal portfolio site. Built with Nuxt 3, animated with GSAP, and styled with Tailwind. Sections cover my background, projects (with write-ups in Markdown), and skills across software and mechatronics engineering.
+
+## Stack
+
+- **Nuxt 3** - framework and routing
+- **Tailwind CSS** - styling
+- **GSAP** - scroll-driven animations
+- **shadcn-vue / Radix Vue** - UI primitives
+- **@nuxt/content** - project write-ups as Markdown files
+- **@nuxt/image** - optimized images
 
 ## Setup
 
-Make sure to install the dependencies:
+Requires Node 18+ and [pnpm](https://pnpm.io/).
 
 ```bash
-# npm
-npm install
-
-# pnpm
 pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+## Development
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+pnpm dev
 ```
 
-## Production
+Runs on `http://localhost:3000`.
 
-Build the application for production:
+## Build
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+pnpm build
+pnpm preview   # preview the production build locally
 ```
 
-Locally preview production build:
+## Adding a Project
 
-```bash
-# npm
-npm run preview
+Project write-ups live in `content/projects/`. Each is a Markdown file - the filename prefix (e.g. `3.`) controls the order they appear on the site.
 
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
 ```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+content/
+  projects/
+    1.goofy-golf.md
+    2.shock-absorbing-regenerative-backpack.md
+    3.breadboard-gpu.md
+    ...
+```

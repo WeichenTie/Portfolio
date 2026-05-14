@@ -4,7 +4,6 @@
     <div class="ml-auto flex gap-8 sm:hidden">
       <NuxtLink to="/">Home</NuxtLink>
       <NuxtLink to="/projects">Projects</NuxtLink>
-      <NuxtLink to="/experience">Resume/CV</NuxtLink>
       <NuxtLink to="/#contact">Contact</NuxtLink>
     </div>
 
@@ -26,9 +25,6 @@
               >
               <NuxtLink class="px-8 py-4 hover:bg-pampas-200" to="/projects"
                 >Projects</NuxtLink
-              >
-              <NuxtLink class="px-8 py-4 hover:bg-pampas-200" to="/experience"
-                >Resume/CV</NuxtLink
               >
               <NuxtLink class="px-8 py-4 hover:bg-pampas-200" to="/#contact"
                 >Contact</NuxtLink
