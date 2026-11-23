@@ -100,18 +100,25 @@ onUnmounted(() => {
           A <span class="text-teal-500">slice</span> of me.
         </h2>
         <p class="splt mt-8">
-          Hi there, I'm Weichen a software and mechatronic engineer from UNSW.
-          I've been programming since I was eighteen and have been tinkering for
-          as far as I can remember. I am passionate about solving challenging
-          problems and making a positive impact to the world around me.
+          At Freelancer.com I work on the Innovation Challenges platform used by
+          NASA, NIH and Honda for prize competitions of up to $6M. I've built
+          parts of the judging workflows, helped migrate over two million PayPal
+          billing agreements with zero downtime, and built a tool that runs AI
+          code reviews in parallel.
+        </p>
+        <p class="splt mt-8">
+          I studied Computer Science and Mechatronic Engineering at UNSW, where
+          I was IT Director of the Robotics and Mechatronics Society (RAMSoc).
+        </p>
+        <p class="splt mt-8">
+          Outside work I like building things that sit between software and
+          hardware, like GPU simulations, embedded systems and a graphics card I
+          made on breadboards.
         </p>
         <p class="splt mt-8">
           If that sounds like what you need, let's get in touch!
         </p>
         <div class="btn-group xs:gap-4 mt-8 flex justify-end gap-6 sm:flex-col">
-          <NuxtLink to="/Experience" class="btn-secondary">
-            EXPERIENCE
-          </NuxtLink>
           <NuxtLink to="/#contact" class="btn-primary"> CONTACT ME </NuxtLink>
         </div>
       </div>
